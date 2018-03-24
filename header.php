@@ -32,7 +32,6 @@
   
 </head>
 
-
 <body>
 <header>
   <div class="bloco">

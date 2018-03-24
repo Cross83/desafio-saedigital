@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i,800');
+*{font-weight:normal; font-family: 'Open Sans', sans-serif;}
+body{padding:0px;margin:0px; background: #e2dcd5;}
+strong{font-weight: bold;}
+ul{padding: 0;margin: 0;}
+li{list-style: none;}
+a, a:hover{text-decoration: none;}
+i{display: inline-block; margin-right: 10px;}
+p.texto{
+    font-size: 12px;
+    color: #2C2E2F;
+    float: left;
+    width: 100%;
+    margin: 0px 0px 0px;
+}
+
+.bloco{
+    width: 100%;
+    max-width: 1110px;
+    padding: 0 15px;
+    margin: 0 auto;    
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    float: left;
+}
+header .logo{
+    float: left;
+    margin: 39px 0px;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #2C2E2F;
+}
+header .dropdown{
+    float: right;
+    margin: 33px 0%;
+}
+header .dropdown button{
+    background: #f1f1f1;
+    color: #979898;
+    padding: 3px 14px;
+    border: 1px solid #e0e0e0;
+}
+header .dropdown ul.dropdown-menu {
+    right: -1px;
+    left: auto;
+    width: 250px;
+}
+
+.menuLateral{
+    float: left;
+    width: 30%;
+    height: 100vh;
+    background: #000;
+}
+.menuLateral ul{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.menuLateral ul li{}
+.menuLateral ul li a, .menuLateral ul li .btCadastro {
+    color: #979898;
+    display: block;
+    padding: 13px 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-bottom: 1px solid #313437;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+.menuLateral ul li a > span{text-transform: uppercase;}
+.menuLateral ul li .btCadastro:before {
+    position: relative;
+    display: inline-block;
+    font-family: FontAwesome;
+    content: '\f107';
+    float: right;
+    color: #6d747a;
+    margin-left: 10px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+.menuLateral ul li a:hover, .menuLateral ul li .btCadastro:hover, .menuLateral ul li .btCadastro.active{
+    background: #979898;
+    color: #fff;
+}
+.menuLateral ul li a:hover span, .menuLateral ul li .btCadastro:hover span{
+    padding-left: 10px;
+}
+.menuLateral ul > li.subMenu .subNivel1 {
+    display: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+.menuLateral ul > li.subMenu .subNivel1 li a{
+    padding: 13px 10px;
+}
+.menuLateral .subMenu:hover .subNivel1{
+    display: block;
+}
+
+
+.conteudo{
+    float: left;
+    width: 70%;
+    /* height: 100vh;
+    overflow: hidden; */
+    position: relative;
+}
+.conteudo:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+}
+.conteudo .boxConteudo{
+    float: left;
+    width: 100%;
+    padding: 40px 30px;
+}
+.conteudo .boxConteudo h3{
+    float: left;
+    width: 100%;
+    margin: 0 0 5px;
+    font-size: 16px;
+    color: #2C2E2F;
+}
+.conteudo .emCartaz{
+    float: left;
+    clear: both;
+    width: 100%;
+    margin-top: 40px;
+}
+.conteudo .emCartaz li{
+    float: left;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    border-radius: 6px;
+    position: relative;
+}
+.conteudo .emCartaz li a{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.conteudo .emCartaz li a .hover{
+    opacity: 0;
+    float: left;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+.conteudo .emCartaz li a:hover .hover{
+    display: block;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+.conteudo .emCartaz li a .hover i{
+    color: #FFF;
+    font-size: 38px;
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin: 0px auto;
+    padding: 56% 0px;
+}
+
+
+/*CARROSSEL*/
+.owl-theme .owl-nav{
+    position: absolute;
+    top: 48%;
+    margin: -55px 0 0;
+    width: 100%;
+}
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+    outline: none;
+    font-size: 40px;
+}
+.owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+    left: -2%;
+}
+.owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    right: -2%;
+}
+
+
+/*INTERNAS GERAL*/
+.conteudo .topo{
+    float: left;
+    width: 100%;
+    height: 100px;
+    background: #efece9;
+    padding: 0px 30px;
+}
+.conteudo .topo .title{
+    float: left;
+    margin: 33px 0;
+}
+.conteudo .topo h4{
+    float: left;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 16px;
+}
+.conteudo .topo p{
+    float: left;
+    clear: both;
+    margin: 0;
+}
+.conteudo .topo .breadCrumb{
+    float: right;
+    margin: 40px 0px;
+}
+.conteudo .topo .breadCrumb li{
+    float: left;
+}
+.conteudo .topo .breadCrumb a{
+    font-size: 12px;
+    color: #ccc;
+}
+.conteudo .topo .breadCrumb a:hover{color: #444;}
+.conteudo .topo .breadCrumb span{
+    font-size: 12px;
+    color: #444;
+}
+.conteudo .topo .breadCrumb .active:before{
+    content: "/\00a0";
+    padding: 0 5px;
+    color: #ccc;
+}
+
+
+/* RESERVAS */
+.reservas{
+    clear: both;
+    float: left;
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px 0;
+    padding: 20px 0 10px;
+    background: #FFF;
+    border: 1px solid #cec3b7;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.reservas .palco{
+    width: 80%;
+    height: 20px;
+    margin: 0 auto;
+    background: #999;
+    text-align: center;
+    color: #666;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+.reservas .poltronas{
+    width: 80%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+.reservas .poltronas li{
+    position: relative;
+    width: 7%;
+    max-width: 51px;
+    height: 45px;
+    background: #F3F3F3;
+    float: left;
+    cursor: pointer;
+    margin: 5px 3px;
+    padding: 4px 6px;
+    text-align: right;
+    font-size: 11px;
+    color: #9e6952;
+    border-bottom: 6px solid #ccc;
+}
+.reservas .poltronas li.indisponivel{
+    background: #f5cbcb;
+    border-bottom: 6px solid #d88888;
+}
+.reservas .poltronas li.selecionado, .reservas .poltronas li.disponivel:hover, .reservas .poltronas li.disponivel.active{
+    background: #cbf3c4;
+    border-bottom: 6px solid #a0d098;
+}
+.reservas .poltronas li.disponivel{
+    background: #F3F3F3;
+    border-bottom: 6px solid #ccc;
+}
+
+.informacao{
+    width: 100%;
+    clear: both;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+.legenda{
+    float: left;
+    width: 50%;    
+}
+.legenda p{
+    font-size: 18px;
+}
+.legenda p i{font-size: 14px;}
+.legenda .lugar{
+    float: left;
+    margin: 4px;
+}
+.legenda .lugar > div{
+    width: 35px;
+    height: 35px;
+    margin: 0 auto 2px;
+}
+.legenda .lugar span{
+    font-size: 12px;
+    color: #7d6952;
+}
+.legenda .vermelho{
+    background: #f5cbcb;
+    border-bottom: 6px solid #d88888;
+}
+.legenda .verde{
+    background: #cbf3c4;
+    border-bottom: 6px solid #a0d098;
+}
+.legenda .cinza{
+    background: #F3F3F3;
+    border-bottom: 6px solid #ccc;
+}
+
+.valor{
+    float: left;
+    width: 50%;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+.valor .valorTotal{
+    font-size: 12px;
+    color: #2C2E2F;
+    clear: both;
+    text-align: left;
+    padding: 8px;
+    border-bottom:  1px solid #ccc;
+}
+.valor .valorTotal span{
+    float: right;
+    text-align: right;
+    font-size: 14px;
+    color: #900;
+    font-weight: bold;
+}
+
+
+/*CADASTRO*/
+.conteudo .boxConteudo .painel {
+    width: 100%;
+    margin: 0 auto 25px;
+    background: #FFF;
+    border: 1px solid #cec3b7;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.conteudo .boxConteudo .painel.busca span{
+    float: right;
+    margin-top: 3px;
+    width: 30%;
+    position: relative;
+}
+.conteudo .boxConteudo .painel.busca span button{
+    position: absolute;
+    top: 7px;
+    right: 0;
+    font-size: 16px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.conteudo .boxConteudo .painel .barraTit{
+    font-size: 14px;
+    line-height: 40px;
+    color: #2C2E2F;
+    padding: 0px 14px;
+    height: 40px;
+    background: #efece9;
+    font-weight: bold;
+}
+.conteudo .boxConteudo .painel .barraTit span{
+    font-size: 12px;
+    color: #2C2E2F;
+    margin-left: 4px;
+}
+.conteudo .boxConteudo .boxTabela{
+    background: #FFF;
+    padding: 30px;
+}
+.conteudo .boxConteudo .boxTabela .tabTopo td{font-weight: bold;}
+.conteudo .boxConteudo .boxTabela .dropdown ul.dropdown-menu {
+    right: 11px;
+    left: auto;
+}
+.conteudo .boxConteudo .boxTabela td a{color: #e02f2f;}
+.conteudo .boxConteudo .boxTabela td a:hover{color: #900;}
+.conteudo .boxConteudo .boxTabela tr.desativada{background: #ecd1d1;}
+.conteudo .boxConteudo .boxTabela .dropdown button{
+    background: #000;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #FFF;
+    font-weight: bold;
+    padding: 7px 18px;
+    outline:none;
+}
+.conteudo .boxConteudo .boxTabela .dropdown button:hover{background: #666;}
+
+.conteudo .boxConteudo .registro .barra{}
+.conteudo .boxConteudo .registro .barra li{float: left;}
+.conteudo .boxConteudo .painel .btSalvar button{
+    background: #000;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 7px 18px;
+    outline:none;
+}
+.conteudo .boxConteudo .painel .btSalvar button:hover{background: #666;}
+
+footer{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 30px;
+    border-top: 1px solid #afa49b;
+    float: left;
+    clear: both;
+}
+footer .footer-copy {
+    float: left;
+    font-size: 12px;
+    color: #2C2E2F;
+}
+
+@media (max-width:1550px){
+    .reservas .poltronas li {
+        width: 5%;
+        max-width: auto;
+        margin: 5px 1%;
+    }
+}
+@media (max-width:1200px){
+    .owl-carousel .owl-nav button.owl-prev {left: -3%;}
+    .owl-carousel .owl-nav button.owl-next {right: -2%;}
+    .conteudo .boxConteudo .painel.busca span{width: 60%;}
+}

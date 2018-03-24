@@ -1,0 +1,36 @@
+.menuLateral {
+    float: left;
+    width: 100%;
+    height: auto;
+    background: #000;
+    position: absolute;
+    top: 100px;
+    z-index: 9;
+}
+.conteudo {
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-top: 190px;
+}
+.conteudo .boxConteudo{padding: 40px 3%;}
+
+.reservas .palco {width: 96%;}
+.reservas .poltronas {width: 96%;}
+.reservas .poltronas li {width: 6.3%; margin: 5px 0.4%; padding: 10px 0px; text-align: center;}
+.valor {float: left; width: 100%;}
+.legenda{width: 100%;}
+
+footer{padding-left: 0px;}
+footer .footer-copy{width: 100%; text-align: center;}
+
+@media (max-width:600px){
+	.conteudo .emCartaz li {float: none; margin: 0 auto; width: 90%; max-width: 250px;}
+}
+
+@media (max-width:450px){
+	header .logo {float: none;width: 100%;margin: 45px auto 10px;text-align: center;}
+	header .dropdown {margin: -70px 0%;}
+    .conteudo .topo .title {width: 100%; margin: 33px 0 10px;}
+    .conteudo .topo .breadCrumb {float: left; margin: -3px 0px;}
+}
